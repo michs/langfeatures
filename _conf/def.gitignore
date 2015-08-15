@@ -1,0 +1,12 @@
+*.o
+applog_*
+
+_local/
+debug/
+release/
+
+external/CUnit-*/
+external/log4c-*/
+custom.mk
+setenv-intern
+
