@@ -121,7 +121,7 @@ DECL_TESTFUNC(tuple_omp)
         }
     }
     CU_ASSERT( comp_task::num_hello == NUM_TASKS/2);
-    CU_ASSERT( comp_task::num_bye = NUM_TASKS/2 );
+    CU_ASSERT( comp_task::num_bye == NUM_TASKS/2 );
 
     CU_ASSERT( comp_task::sum == NUM_TASKS*(NUM_TASKS+1)/2 );
                                     // in case Gauss was right
