@@ -18,7 +18,7 @@ ln -s _conf/def.gitignore .gitignore
 #     or source the compilervars.sh script...
 
 # Prepare the environment
-export export PRIV_USR_PATH=$(pwd)/usr
+export PRIV_USR_PATH=$(pwd)/usr
 export COMPILER=intel
 export VERS=14.0
 . setenv.sh
