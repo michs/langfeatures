@@ -1,0 +1,40 @@
+
+# Clone project
+export MY_CLONE=$(pwd)/langfeatures
+mkdir -p $MY_CLONE
+git clone... => $MY_CLONE
+cd $MY_CLONE
+
+# Finalize workspace
+./_conf/init-workspace.sh
+
+# Using the default examples should be sufficient
+# otherwise adapt "custom.mk" as needed
+ln -s _conf/def.custom.mk custom.mk
+ln -s _conf/def.gitignore .gitignore
+
+# make compiler available in the PATH
+#     f.ex. with module load i-compilers/14.0
+
+# Prepare the environment
+export export PRIV_USR_PATH=$(pwd)/usr
+export COMPILER=intel
+export VERS=14.0
+. setenv.sh
+
+# Compile support libraries
+cd external/
+make all
+cd $MY_CLONE
+
+# Build the unit tests in release mode
+cd cpp
+make
+
+# Run the unit tests
+release/test_cpp
+
+# Alternatively for debug
+cd cpp
+make DEBUG=1
+debug/test_cpp
