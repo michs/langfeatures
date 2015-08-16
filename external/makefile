@@ -38,7 +38,7 @@ log4c_install : log4c_make
 
 cunit_unpack :
 	rm -rf CUnit-$(CUNIT_VER)
-	tar xvzf CUnit-$(CUNIT_VER)-src.tar.bz2
+	tar xvjf CUnit-$(CUNIT_VER)-src.tar.bz2
 
 cunit_make :
 	if [ ! -d CUnit-$(CUNIT_VER) ] ; then make cunit_unpack ; fi ;\

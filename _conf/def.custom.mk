@@ -1,9 +1,12 @@
 # User's customisations of the general build.
 #
 
-ifeq ($(CXX_NAME),intel)
-  CPP_FLAGS += -stdlib=libc++
+ifeq ($(OS),Darwin)
+  ifeq ($(CXX_NAME),intel)
+    CPP_FLAGS += -stdlib=libc++
+  endif
 endif
+
 # CFLAGS_USER +=
 MPICFLAGS_USER += -DMPI_ALLOWED=1
 
