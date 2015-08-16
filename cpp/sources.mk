@@ -1,7 +1,7 @@
 # Yet another option for custimisation.
 #
 # CFLAGS += ...
-CPP_FLAGS += -std=c++11 -Wno-write-strings -g
+CPP_FLAGS += -std=c++11 -Wno-write-strings
 
 # Specifikation of C modules.
 #

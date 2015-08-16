@@ -51,9 +51,9 @@ CPP_FLAGS += -c -Wall -fmessage-length=0
 CPP_FLAGS += -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)"
 
 ifdef DEBUG
-CPPFLAGS += -O0 -g3 -DDEBUG_DEV=1
+CPP_FLAGS += -O0 -g3 -DDEBUG_DEV=1
 else
-CPPFLAGS += -O3
+CPP_FLAGS += -O3
 endif
 
 INCLUDES += -Isrc -Iinc $(patsubst %, -I%/inc, $(REF_PROJECTS))
