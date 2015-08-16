@@ -2,7 +2,7 @@
 # Clone project
 export MY_CLONE=$(pwd)/langfeatures
 mkdir -p $MY_CLONE
-git clone... => $MY_CLONE
+git clone git@github.com:michs/langfeatures.git $MY_CLONE
 cd $MY_CLONE
 
 # Finalize workspace
@@ -15,6 +15,7 @@ ln -s _conf/def.gitignore .gitignore
 
 # make compiler available in the PATH
 #     f.ex. with module load i-compilers/14.0
+#     or source the compilervars.sh script...
 
 # Prepare the environment
 export export PRIV_USR_PATH=$(pwd)/usr
