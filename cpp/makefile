@@ -26,7 +26,6 @@ INSTALL_DIR ?= $(HOME)/devel/usr
 # Build an executable
 $(ARTEFACT) : $(REF_LIBS) $(OBJS)
 	$(CXX) $(LDFLAGS) $(LDFLAGS_OS) $(LDFLAGS_USER) -o "$(ARTEFACT)" $(SPEC_OBJS) $(OBJS) $(LIBES)
-	#$(REF_LIBS) $(EXT_LIBS)
 
 # Clean targets
 #

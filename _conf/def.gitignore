@@ -7,6 +7,7 @@ release/
 
 external/CUnit-*/
 external/log4c-*/
+usr/
 
 .gitignore
 custom.mk
